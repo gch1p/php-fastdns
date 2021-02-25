@@ -28,7 +28,7 @@ class FastDNS {
         $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
 
-        $response = jsonDecode($body);
+        $response = json_decode($body, true);
         if ($code != 200)
             throw new FastDNSException($response['message'], $response['code']);
 
@@ -274,7 +274,7 @@ class FastDNS {
         if (!empty($params)) {
             if ($method === 'POST' || $method == 'PUT') {
                 curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
-                curl_setopt($ch, CURLOPT_POSTFIELDS, jsonEncode($params));
+                curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($params));
             } else if ($method === 'GET') { // Probably never used
                 $url .= '?'.http_build_query($params);
             }
@@ -288,7 +288,7 @@ class FastDNS {
         $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
 
-        $response = jsonDecode($body);
+        $response = json_decode($body, true);
         if ($code >= 400) {
             if (!empty($response['code']) && !empty($response['message'])) {
                 $message = $response['message'];
