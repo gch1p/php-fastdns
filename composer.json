@@ -3,7 +3,7 @@
     "version": "1.0",
     "description": "FastVPS DNS API Client",
     "type": "library",
-    "license": "BSD-2c",
+    "license": "BSD-2-Clause",
     "authors": [
         {
             "name": "Evgeny Zinoviev",
