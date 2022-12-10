@@ -1,6 +1,6 @@
 {
     "name": "ch1p/php-fastdns",
-    "version": "1.0",
+    "version": "1.0.1",
     "description": "FastVPS DNS API Client",
     "type": "library",
     "license": "BSD-2-Clause",
