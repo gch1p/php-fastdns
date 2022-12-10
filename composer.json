@@ -1,0 +1,21 @@
+{
+    "name": "ch1p/php-fastdns",
+    "description": "FastVPS DNS API Client",
+    "type": "library",
+    "license": "BSD-2c",
+    "authors": [
+        {
+            "name": "Evgeny Zinoviev",
+            "email": "me@ch1p.io"
+        }
+    ],
+    "require": {
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ch1p\\": "src/"
+        }
+    }
+}

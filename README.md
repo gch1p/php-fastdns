@@ -4,9 +4,18 @@
 
 Полезно для автоматизации, если у вас много доменов/поддоменов.
 
+## Установка
+
+```shell
+composer require ch1p/php-fastdns
+```
+
 ## Использование
 
 ```php
+use ch1p\FastDNS;
+use ch1p\FastDNSException;
+
 $fastdns = new FastDNS();
 try {
 	// авторизуемся

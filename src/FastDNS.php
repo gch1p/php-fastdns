@@ -1,5 +1,7 @@
 <?php
 
+namespace ch1p;
+
 class FastDNS {
 
     const API_HOST = 'https://fastdns.fv.ee';
@@ -303,5 +305,3 @@ class FastDNS {
     }
 
 }
-
-class FastDNSException extends Exception {}
